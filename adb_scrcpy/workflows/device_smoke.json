@@ -1,0 +1,30 @@
+{
+  "variables": {
+    "PACKAGE": "com.example.app",
+    "SDK": "REPLACE_WITH_ANDROID_SDK"
+  },
+  "steps": [
+    {
+      "name": "android_sdk_matches_expected",
+      "kind": "assert",
+      "condition": {
+        "type": "shell_equals",
+        "args": ["getprop", "ro.build.version.sdk"],
+        "equals": "${SDK}"
+      }
+    },
+    {
+      "name": "target_package_installed",
+      "kind": "assert",
+      "condition": {
+        "type": "package_installed",
+        "package": "${PACKAGE}"
+      }
+    },
+    {
+      "name": "device_state",
+      "kind": "screenshot",
+      "screenshot_name": "device_smoke"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[device]
+serial = "REPLACE_WITH_DEVICE_SERIAL"
+package = "com.example.app"
+
+[tools]
+adb_path = "../platform-tools/adb.exe"
+scrcpy_path = "../scrcpy/scrcpy.exe"
+
+[video]
+bit_rate = "8M"
+max_fps = 60
+
+[runtime]
+command_timeout = 10.0
+step_timeout = 30.0
+artifacts_dir = "../artifacts"
+retention_days = 30
+log_level = "INFO"
+
+[safety]
+allowed_packages = []
+capture_actions = true
+
+[device_names]

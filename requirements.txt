@@ -1,0 +1,4 @@
+# Locked versions verified in the current Python 3.11 environment.
+Pillow==10.4.0
+numpy==1.26.4
+opencv-contrib-python==4.6.0.66
